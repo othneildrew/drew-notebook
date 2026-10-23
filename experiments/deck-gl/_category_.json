@@ -1,0 +1,8 @@
+{
+  "label": "DeckGL",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "deck.gl layer examples, each rendered live with tweakable controls."
+  }
+}

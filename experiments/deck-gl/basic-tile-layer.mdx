@@ -1,0 +1,20 @@
+---
+title: Basic TileLayer
+sidebar_label: Basic TileLayer
+slug: /
+description: A deck.gl TileLayer over OpenStreetMap tiles with a ScatterplotLayer on top.
+hide_table_of_contents: true
+experiment: true
+---
+
+import Experiment from '@site/src/components/Experiment';
+import experimentSource from '!!raw-loader!@site/src/experiments/deck-gl/BasicTileLayer.tsx';
+import renderTileBitmapSource from '!!raw-loader!@site/src/experiments/deck-gl/renderTileBitmap.ts';
+
+<Experiment
+  files={[
+    { title: 'BasicTileLayer.tsx', source: experimentSource },
+    { title: 'renderTileBitmap.ts', source: renderTileBitmapSource },
+  ]}
+  load={() => import('@site/src/experiments/deck-gl/BasicTileLayer')}
+/>

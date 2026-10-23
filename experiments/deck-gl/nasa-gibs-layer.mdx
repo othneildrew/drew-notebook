@@ -1,0 +1,19 @@
+---
+title: NASA GIBS Layer
+sidebar_label: NASA GIBS Layer
+description: NASA GIBS WMTS imagery rendered with a deck.gl TileLayer, switchable by layer and date.
+hide_table_of_contents: true
+experiment: true
+---
+
+import Experiment from '@site/src/components/Experiment';
+import experimentSource from '!!raw-loader!@site/src/experiments/deck-gl/NasaGibsLayer.tsx';
+import renderTileBitmapSource from '!!raw-loader!@site/src/experiments/deck-gl/renderTileBitmap.ts';
+
+<Experiment
+  files={[
+    { title: 'NasaGibsLayer.tsx', source: experimentSource },
+    { title: 'renderTileBitmap.ts', source: renderTileBitmapSource },
+  ]}
+  load={() => import('@site/src/experiments/deck-gl/NasaGibsLayer')}
+/>

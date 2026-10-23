@@ -1,43 +1,22 @@
-# Website
+# Drew's Notebook
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A Docusaurus site of live experiments. Each experiment is a React component rendered at the top of its page, with its full source below and auto-generated debug controls ([lil-gui](https://lil-gui.georgealways.com/)) on the right.
 
-## Installation
+## Development
 
 ```bash
 npm install
+npm start
 ```
 
-**Note**: feel free to use the package manager of your choice.
+| Script              | Purpose               |
+| ------------------- | --------------------- |
+| `npm run build`     | Production build      |
+| `npm run typecheck` | Type-check with `tsc` |
+| `npm run lint`      | Lint with ESLint      |
+| `npm run format`    | Format with Prettier  |
 
-## Local Development
+## Adding an experiment
 
-```bash
-npm run start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-npm run build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Create `src/experiments/<topic>/<Name>.tsx` with a default-exported component. Call `useControls({...})` from `src/components/Experiment/useControls.ts` to get live values and a controls panel.
+2. Create `experiments/<topic>/<name>.mdx` with `experiment: true` and `hide_table_of_contents: true` in its front matter, rendering `<Experiment>` as in the existing pages.
