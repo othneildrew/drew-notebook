@@ -1,13 +1,12 @@
 {
   "name": "drew-notebook",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -62,5 +61,15 @@
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "description": "Live experiments with tweakable controls",
+  "author": "Othneil Drew",
+  "homepage": "https://othneildrew.github.io/drew-notebook/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othneildrew/drew-notebook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/othneildrew/drew-notebook/issues"
   }
 }
